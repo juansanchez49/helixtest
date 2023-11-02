@@ -1,0 +1,80 @@
+.helixcomponent-wrapper {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-color: #f5f5f5;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    border-radius: 1.25rem;
+}
+
+.purple{
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-color: #8093DC;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    border-radius: 1.25rem;
+    color: white;
+}
+
+.purple > div > div > div > .button-container > .button {
+    color: white;
+    background: black;
+    border: 0;
+}
+
+.purple > div > div > div > .button-container > .button:hover {
+    background: grey;
+    border: 0;
+}
+
+
+.helixcomponent {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    padding-bottom: 7.1875rem;
+    margin: auto;
+}
+
+.helixcomponent > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.helixcomponent img {
+    width: 100%;
+    border-radius: 1.25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.helixcomponent > div > div {
+    order: 1;
+}
+
+.helixcomponent > div > .helixcomponent-img-col {
+    order: 0;
+}
+
+.helixcomponent > div > .helixcomponent-img-col img {
+    display: block;
+}
+
+@media (min-width: 900px) {
+    .helixcomponent > div {
+        align-items: center;
+        flex-direction: unset;
+        gap: 10%;
+    }
+
+    .helixcomponent > div > div {
+        flex: 1;
+        order: unset;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.xs {
+    font-size: small;
+}
