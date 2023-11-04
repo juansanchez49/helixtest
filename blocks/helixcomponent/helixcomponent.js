@@ -1,4 +1,8 @@
-export default function decorate(block) {
+import {
+  fetchPlaceholders,
+} from '../../scripts/aem.js';
+
+export default async function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`helixcomponent-${cols.length}-cols`);
 
@@ -23,5 +27,14 @@ export default function decorate(block) {
   if (defaultContentWrapper && block.classList.contains('purple')) {
     // Apply the background to the default-content-wrapper div
     defaultContentWrapper.classList.add('purple');
+  }
+
+  // fetch placeholders from the 'en' folder
+  const placeholders = await fetchPlaceholders();
+  // retrieve the value for key 'moreInfo'
+  const { moreInfo } = placeholders;
+  const button = block.querySelector('.button');
+  if (button) {
+    button.innerHTML = moreInfo;
   }
 }
